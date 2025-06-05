@@ -1,0 +1,6 @@
+{
+    "item.thisismagicmod.rune_force": "Rune of Force",
+    "item.thisismagicmod.rune_force.tooltip": "Effect: %s",
+    "item.thisismagicmod.rune_force.usage": "Hold in offhand while wielding a sword to apply effect",
+    "itemGroup.thisismagicmod.runes": "This Is Magic - Runes"
+} 

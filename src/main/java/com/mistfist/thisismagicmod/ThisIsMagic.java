@@ -1,8 +1,9 @@
-package com.thisismagic;
+package com.mistfist.thisismagicmod;
 
 import com.mojang.logging.LogUtils;
-import com.thisismagic.magic.MagicSystem;
-import com.thisismagic.registry.ModRegistries;
+import com.mistfist.thisismagicmod.magic.MagicSystem;
+import com.mistfist.thisismagicmod.registry.ModItems;
+import com.mistfist.thisismagicmod.registry.ModCreativeTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,7 +20,8 @@ public class ThisIsMagic {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register our mod's registries
-        ModRegistries.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register magic system
         MagicSystem.register(modEventBus);
@@ -29,6 +31,6 @@ public class ThisIsMagic {
     }
 
     public static ResourceLocation makeID(String path) {
-        return ResourceLocation.tryParse(MOD_ID + ":" + path);
+        return new ResourceLocation(MOD_ID, path);
     }
 } 

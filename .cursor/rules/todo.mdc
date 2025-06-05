@@ -27,13 +27,19 @@ project-root/
 │       │   └── com/
 │       │       └── mistfist/
 │       │           └── thisismagicmod/
-│       │               ├── ThisIsMagic.java # Main mod class
-│       │               ├── config/          # Mod configuration files (optional)
-│       │               ├── data/            # Helpers for recipes/loot/advancements
-│       │               └── registry/        # All registry logic (items, blocks, tabs, etc.)
-│       │                   ├── ModBlocks.java
-│       │                   ├── ModItems.java
-│       │                   └── ModTabs.java
+│       │               ├── ThisIsMagic.java                # Main mod class
+│       │               ├── config/                         # Mod configuration files (optional)
+│       │               ├── data/                           # Helpers for recipes/loot/advancements
+│       │               ├── registry/                       # All registry logic (items, blocks, tabs, etc.)
+│       │               │   ├── ModItems.java
+│       │               │   ├── ModBlocks.java
+│       │               │   ├── ModTabs.java
+│       │               │   └── ModRuneTypes.java           # Enum or registry of rune effects
+│       │               ├── item/
+│       │               │   ├── RuneItem.java               # Abstract or base class for rune logic
+│       │               │   └── DamageRuneItem.java         # First rune type
+│       │               ├── system/
+│       │               │   └── RuneManager.java 
 │       └── resources/
 │           ├── META-INF/
 │           │   └── mods.toml

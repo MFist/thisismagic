@@ -1,4 +1,4 @@
-package com.thisismagic.magic;
+package com.mistfist.thisismagicmod.magic;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 
