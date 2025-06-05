@@ -1,6 +1,9 @@
 {
     "item.thisismagicmod.rune_force": "Rune of Force",
     "item.thisismagicmod.rune_force.tooltip": "Effect: %s",
-    "item.thisismagicmod.rune_force.usage": "Hold in offhand while wielding a sword to apply effect",
+    "item.thisismagicmod.rune_force.usage": "Hold the rune and right-click while holding a sword to infuse",
+    "item.thisismagicmod.runed_weapon": "Runed %s",
+    "message.thisismagicmod.rune_applied": "§aRune successfully infused!",
+    "message.thisismagicmod.rune_failed": "§cCannot apply this rune to that item",
     "itemGroup.thisismagicmod.runes": "This Is Magic - Runes"
 } 
