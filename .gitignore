@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# Eclipse
+*.launch
+.settings/
+.metadata/
+.classpath
+.project
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+bin/
+.settings/
+.vscode/
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+# Minecraft
+run/
+
+# Forge
+forge*changelog.txt
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar

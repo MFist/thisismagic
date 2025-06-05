@@ -1,0 +1,95 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- The mod targets Minecraft version 1.20.4 using the Forge mod loader.
+
+- Use Java 17 for all source code.
+
+- The mod ID is thisismagicmod
+
+- The base package is com.example.thisismagicmod.
+
+- Structure the codebase using the next structure:
+project-root/
+├── build.gradle
+├── settings.gradle
+├── gradle/
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── mistfist/
+│       │           └── thisismagicmod/
+│       │               ├── ThisIsMagic.java # Main mod class
+│       │               ├── config/          # Mod configuration files (optional)
+│       │               ├── data/            # Helpers for recipes/loot/advancements
+│       │               └── registry/        # All registry logic (items, blocks, tabs, etc.)
+│       │                   ├── ModBlocks.java
+│       │                   ├── ModItems.java
+│       │                   └── ModTabs.java
+│       └── resources/
+│           ├── META-INF/
+│           │   └── mods.toml
+│           ├── assets/
+│           │   └── thisismagicmod/
+│           │       ├── blockstates/
+│           │       ├── lang/
+│           │       │   └── en_us.json
+│           │       ├── models/
+│           │       │   ├── block/
+│           │       │   └── item/
+│           │       └── textures/
+│           │           ├── block/
+│           │           └── item/
+│           └── data/
+│               └── thisismagicmod/
+│                   ├── recipes/
+│                   ├── loot_tables/
+│                   └── advancements/
+
+- Use DeferredRegister for registering all:
+    - Items, Blocks, CreativeModeTabs, BlockEntities, MenuTypes, etc.
+
+- Use the Forge mod event bus (modEventBus) for all content registration.
+
+- Use official Forge mappings (no unofficial or custom ones).
+
+- No coremodding, mixins, or reflection-based hacks unless absolutely unavoidable.
+
+- Metadata (mods.toml) must be consistent with the mod ID, version, and display name.
+
+- Avoid logic in static initializers or field declarations. Use event listeners and suppliers.
+
+- Keep your Creative Tabs modular: use one per major system (e.g. magic, alchemy, combat).
+
+- Maintain separation of concern between registration, logic, and visuals.
+
+- Follow Minecraft and Forge's naming conventions (e.g., snake_case for asset names, PascalCase for classes).
+
+- Do not manually assign registry IDs. Let Forge handle registration.
+
+- Store textures and models under assets/thisismagicmod/.
+
+- Localizations must be in lang/en_us.json.
+
+- mods.toml is the single source of truth for mod metadata.
+
+-----------------------------------------------------------------------------------------------------------
+
+Core Packages:
+- ThisIsMagic.java - your main mod class, annotated with @Mod("thisismagicmod").
+- registry/ - holds all DeferredRegister logic for blocks, items, and creative tabs.
+- config/ - optional folder for Forge config files (.toml or .java backed).
+- data/ - helper classes for JSON generation or utilities later.
+
+Resource Layout:
+- assets/thisismagicmod/ - textures, models, and localizations go here.
+- data/thisismagicmod/ - data-driven files: recipes, loot tables, advancements, etc.
+- mods.toml - metadata that Forge reads to load your mod.
